@@ -1,4 +1,5 @@
 ﻿using System;
+using Algorithm.LeetCode.QuestionBank;
 
 namespace Algorithm.App
 {
@@ -12,7 +13,14 @@ namespace Algorithm.App
             Console.WriteLine("***************************客户端程序调用开始****************************");
             try
             {
-                Console.WriteLine("Hello World!");
+                var solution = new Solution();
+                {
+                    int[] nums = new int[] { 2, 7, 8, 11, 23 };
+                    int target = 15;
+                    var result01 = solution.TwoSum01(nums, target);
+                    var result = solution.TwoSum(nums, target);
+                }
+
             }
             catch (Exception ex)
             {
