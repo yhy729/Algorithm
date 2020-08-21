@@ -15,26 +15,24 @@ namespace Algorithm.LeetCode.QuestionBank
                      q = l2,
                      curr = dumyHead;
             int carry = 0;
-            List<int> arr = new List<int>();
             while (p != null || q != null)
             {
                 int x = p != null ? p.val : 0;
                 int y = q?.val ?? 0;
                 int sum = carry + x + y;
+                int currentVal = sum % 10;
                 carry = sum / 10;
-                //curr.next = new ListNode(sum % 10);
-                arr.Add(sum % 10);
-                if (p != null)
-                    p = p.next;
-                if (q != null)
-                    q = q.next;
+
+                curr.next = new ListNode(currentVal);
+
+                if (p != null) p = p.next;
+                if (q != null) q = q.next;
             }
             if (carry > 0)
             {
-                //curr.next = new ListNode(carry);
-                arr.Add(carry);
+                curr.next = new ListNode(carry);
             }
-            return dumyHead;
+            return dumyHead.next;
         }
     }
 
