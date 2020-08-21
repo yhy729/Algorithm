@@ -20,6 +20,9 @@ namespace Algorithm.App
                     var result01 = solution.TwoSum01(nums, target);
                     var result = solution.TwoSum(nums, target);
                 }
+                {
+                    var result = solution.AddTwoNumbers(null, null);
+                }
 
             }
             catch (Exception ex)
