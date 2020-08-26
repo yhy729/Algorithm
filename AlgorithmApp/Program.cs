@@ -15,13 +15,21 @@ namespace Algorithm.App
             {
                 var solution = new Solution();
                 {
+                    //01两数之和
                     int[] nums = new int[] { 2, 7, 8, 11, 23 };
                     int target = 15;
                     var result01 = solution.TwoSum01(nums, target);
                     var result = solution.TwoSum(nums, target);
                 }
                 {
-                    var result = solution.AddTwoNumbers(null, null);
+                    //02两数相加
+                    ListNode l1 = new ListNode(2);
+                    l1.next = new ListNode(4);
+                    l1.next.next = new ListNode(3);
+                    ListNode l2 = new ListNode(5);
+                    l2.next = new ListNode(6);
+                    l2.next.next = new ListNode(4);
+                    var result = solution.AddTwoNumbers(l1, l2);
                 }
 
             }

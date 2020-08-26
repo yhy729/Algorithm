@@ -24,6 +24,7 @@ namespace Algorithm.LeetCode.QuestionBank
                 carry = sum / 10;
 
                 curr.next = new ListNode(currentVal);
+                curr = curr.next;
 
                 if (p != null) p = p.next;
                 if (q != null) q = q.next;
