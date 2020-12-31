@@ -31,6 +31,11 @@ namespace Algorithm.App
                     l2.next.next = new ListNode(4);
                     var result = solution.AddTwoNumbers(l1, l2);
                 }
+                {
+                    //03无重复字符的最长子串
+                    var s = "abcabcbb";
+                    var result = solution.LengthOfLongestSubstring(s);
+                }
 
             }
             catch (Exception ex)
